@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BakeMatch - About</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <h1>Pantry</h1>
+        <div class="search-box">
+          <input
+            id="pantry-search"
+            type="text"
+            placeholder="Search ingredients..."
+          />
+        </div>
+        
+        <button id="show-recipes-btn" class="btn-search">
+          Show recipes
+        </button>
+        
+        <div id="pantry-status"></div>
+
+        <div id="pantry-categories"></div>
+      </aside>
+
+      <main class="main-content">
+        <header>
+          <div class="logo">
+            <a href="index.html">
+              <img src="avatars/logo.png" alt="BakeMatch Logo" />
+            </a>
+          </div>
+          <nav>
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="recipe-overview.html" class="nav-item">Recipes</a>
+            <a href="favorites.html" class="nav-item">Favorites</a>
+            <a href="tips.html" class="nav-item">Tips</a>
+            <a href="blogs.html" class="nav-item">Blogs</a>
+            <a href="about.html" class="nav-item active">About</a>
+          </nav>
+          <div class="actions">
+            <button class="action-btn ai">Help</button>
+            <a href="profile.html" class="action-btn profile">Profile</a>
+          </div>
+        </header>
+
+        <section class="content-section">
+          <div class="about-container">
+            <h1>About BakeMatch</h1>
+            
+            <div class="about-intro">
+              <p>
+                Welcome to BakeMatch! This website was created as a student project 
+                to help home cooks and baking enthusiasts make the most of their pantry 
+                ingredients and reduce food waste in a fun, practical way.
+              </p>
+            </div>
+
+            <div class="about-section">
+              <h2>Meet the Creator</h2>
+              <div class="creator-profile">
+                <img src="avatars/profiel foto_meike scholten.jpg" alt="Meike Scholten" class="creator-photo" />
+                <div class="creator-text">
+                  <p>
+                    Hi! I'm <strong>Meike Scholten</strong>, a 22-year-old student from Borne, Netherlands. 
+                    I'm currently in my third year of the HBO degree in Engineering at Saxion University 
+                    of Applied Sciences in Enschede. For my minor, I chose Creative, Design, and Technology, 
+                    which is the context in which BakeMatch was developed.
+                  </p>
+                </div>
+              </div>
+              <p>
+                I've known since high school that I wanted to study Engineering, and I previously 
+                completed an MBO Engineering program. My main passion is drawing 
+                houses, but I also have a deep love for baking and cooking. That's why I chose this 
+                theme for my showcase project—it combines my technical skills with something I'm 
+                genuinely passionate about.
+              </p>
+            </div>
+
+            <div class="about-section">
+              <h2>Why BakeMatch?</h2>
+              <p>
+                Growing up, I gained a lot of experience with baking and cooking at home, especially 
+                from my mother. My sister is studying to become a baker, so I continue to learn new 
+                techniques and recipes from her as well.
+              </p>
+              <p>
+                One problem I kept noticing at home was that we often had leftover ingredients we 
+                didn't know how to use. Sometimes these ingredients would expire and end up being 
+                thrown away. I wanted to solve this problem in a practical and creative way—and 
+                that's how BakeMatch was born.
+              </p>
+              <p>
+                BakeMatch helps you discover recipes based on the ingredients you already have in 
+                your pantry. Whether you have a few random items or a fully stocked kitchen, this 
+                tool makes it easy to find delicious recipes, reduce waste, and get inspired in 
+                the kitchen.
+              </p>
+            </div>
+
+            <div class="about-section">
+              <h2>About This Project</h2>
+              <p>
+                BakeMatch is a student project created as part of the Creative, Design, and Technology 
+                minor at Saxion University of Applied Sciences. It showcases web development skills, 
+                user-centered design, and practical problem-solving. While it's a learning project, 
+                it's built with real functionality to help people make better use of their ingredients 
+                and enjoy cooking more.
+              </p>
+              <p>
+                I hope you enjoy using BakeMatch as much as I enjoyed creating it. Happy baking!
+              </p>
+            </div>
+
+            <div class="about-footer">
+              <p><em>— Meike Scholten, 2026</em></p>
+            </div>
+          </div>
+        </section>
+
+        <div id="ai-chatbot-modal" class="modal">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h2>AI Assistant</h2>
+              <span class="close-modal">&times;</span>
+            </div>
+            <div id="chat-messages" class="chat-messages"></div>
+            <div class="chat-input-container">
+              <input
+                type="text"
+                id="chat-input"
+                placeholder="Ask me anything about recipes..."
+              />
+              <button id="send-message-btn">Send</button>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <script src="js/pantry.js"></script>
+    <script src="js/ai-chatbot.js"></script>
+  </body>
+</html>

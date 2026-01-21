@@ -1,0 +1,1043 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BakeMatch - Tips</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <h1>Pantry</h1>
+        <div class="search-box">
+          <input
+            id="pantry-search"
+            type="text"
+            placeholder="Search ingredients..."
+          />
+        </div>
+        
+        <button id="show-recipes-btn" class="btn-search">
+          Show recipes
+        </button>
+        
+        <div id="pantry-status"></div>
+
+        <div id="pantry-categories"></div>
+      </aside>
+
+      <main class="main-content">
+        <header>
+          <div class="logo">
+            <a href="index.html">
+              <img src="avatars/logo.png" alt="BakeMatch Logo" />
+            </a>
+          </div>
+          <nav>
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="recipe-overview.html" class="nav-item">Recipes</a>
+            <a href="favorites.html" class="nav-item">Favorites</a>
+            <a href="tips.html" class="nav-item active">Tips</a>
+            <a href="blogs.html" class="nav-item">Blogs</a>
+            <a href="about.html" class="nav-item">About</a>
+          </nav>
+          <div class="actions">
+            <button class="action-btn ai">AI</button>
+            <a href="profile.html" class="action-btn profile">Profile</a>
+          </div>
+        </header>
+
+        <section class="tips-section">
+          <!-- Topic Selection -->
+          <div class="tips-topics">
+            <button class="topic-btn active" data-topic="cooking-tips">Cooking Tips</button>
+            <button class="topic-btn" data-topic="cooking-techniques">Cooking Techniques</button>
+          </div>
+
+          <!-- Cooking Tips Section -->
+          <div class="tips-content" id="cooking-tips">
+            <h2>Cooking Tips</h2>
+            <div class="tips-grid">
+              <div class="tip-box" data-ingredient="broccoli">
+                <img src="images/broccoli.jpg" alt="Broccoli">
+                <h3>Broccoli</h3>
+              </div>
+              <div class="tip-box" data-ingredient="cauliflower">
+                <img src="images/cauliflower.jpg" alt="Cauliflower">
+                <h3>Cauliflower</h3>
+              </div>
+              <div class="tip-box" data-ingredient="brussels-sprouts">
+                <img src="images/brussel sprouts.jpg" alt="Brussels Sprouts">
+                <h3>Brussels Sprouts</h3>
+              </div>
+              <div class="tip-box" data-ingredient="green-asparagus">
+                <img src="images/green asparagus.jpg" alt="Green asparagus">
+                <h3>Green asparagus</h3>
+              </div>
+              <div class="tip-box" data-ingredient="zucchini">
+                <img src="images/zucchini.jpg" alt="Zucchini">
+                <h3>Zucchini</h3>
+              </div>
+              <div class="tip-box" data-ingredient="rice">
+                <img src="images/rice.jpg" alt="Rice">
+                <h3>Rice</h3>
+              </div>
+              <div class="tip-box" data-ingredient="potatoes">
+                <img src="images/potatoes.jpg" alt="Potatoes">
+                <h3>Potatoes</h3>
+              </div>
+              <div class="tip-box" data-ingredient="pasta">
+                <img src="images/pasta.jpg" alt="Pasta">
+                <h3>Pasta</h3>
+              </div>
+            </div>
+
+            <!-- Ingredient Detail View (hidden by default) -->
+            <div class="ingredient-detail" id="ingredient-detail">
+              <button class="back-btn" id="back-btn">← Back to all tips</button>
+              <h2 id="ingredient-name"></h2>
+              <div id="ingredient-info">
+                <!-- Information will be populated here -->
+              </div>
+            </div>
+          </div>
+
+          <!-- Cooking Techniques Section -->
+          <div class="tips-content" id="cooking-techniques">
+            <h2>Cooking Techniques</h2>
+            <div class="techniques-intro">
+              <p>Here you'll find all the cooking techniques, from A to Z. Each cooking technique is explained with a concise explanation. A handy guide with all the essential cooking terms, such as blanching, braising, and gratinating.</p>
+            </div>
+            <div class="techniques-list">
+              <div class="ingredient-section">
+                <h3>Al dente</h3>
+                <p>The point at which food, usually vegetables, is cooked and tender, but still offers a slight resistance when bitten into. This preserves the texture and nutritional value of the food.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Amuse-bouche</h3>
+                <p>An amuse-bouche is a small, flavorful dish, usually served before a meal to whet the appetite. It is intended as a culinary surprise and is often served in one or two bites. Amuse-bouches often feature unique flavor combinations and ingredients to surprise and delight guests before the main course is served.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Bain-marie</h3>
+                <p>A bain-marie is a technique in which food is heated by placing it in a bowl or pan that sits in a larger pan of hot water. It is often used to melt chocolate or sauces, for example, without direct contact with the hot source, allowing it to heat evenly and gently. This preserves the quality of the chocolate and prevents it from burning or lumping.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Bisque</h3>
+                <p>A bisque is a creamy soup usually made from shellfish, such as lobster, shrimp, or crab. Its distinguishing feature is that the shells and heads of the shellfish are used to create a rich, fragrant broth before being mixed with cream and spices to finish the soup. The result is a flavorful soup.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Breading</h3>
+                <p>Breading is the process of coating food first with flour, then with beaten egg, and finally with breadcrumbs or breadcrumbs. This creates a crispy outer layer when baked or fried.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Blanching</h3>
+                <p>Blanching is a cooking technique in which food is briefly placed in boiling water and then immediately cooled in cold water. It is often used to prepare vegetables and preserve their color, texture and flavor before further processing them into other dishes.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Braising</h3>
+                <p>A cooking method in which food is first seared and then slowly cooked in a closed pot with a small amount of liquid. This results in tender, juicy food and concentrated flavors. You can braise meat, fish, poultry, and vegetables.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Broiling</h3>
+                <p>Cooking food in a hot oven or pan with oil to create a crispy exterior and retain juices within. This is often used for meat, poultry, and vegetables.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Caramelization</h3>
+                <p>A process in which sugar is heated until it melts and turns brown, creating a deep, rich caramel flavor. Caramelization is often used for desserts such as crème brûlée and sauces like caramel sauce. Be careful not to burn the sugar, as this can happen very quickly.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Confit</h3>
+                <p>A preservation technique in which food, such as fruit or meat, is slowly cooked in fat or sugar water to preserve and soften it. This process helps preserve food and develop rich flavors.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Curling</h3>
+                <p>The process by which liquid and solids in a dish separate, often occurring with sauces that have been cooked too hot. Curdling can occur when fat and water are not properly emulsified.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Deep-frying</h3>
+                <p>A cooking technique in which food is submerged in hot oil, giving it a crispy exterior. This is often used for fried snacks such as fries, chicken nuggets, and donuts.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Deglazing</h3>
+                <p>A cooking technique in which liquid, usually wine, stock, vinegar, or water, is added to a hot pan to loosen and combine any browned or flavorful residue that has formed on the bottom, resulting in a concentrated and flavorful sauce. This process is often used to enhance the flavors of a dish and thicken the sauce.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Filling</h3>
+                <p>A cutting technique in which fish or meat is cut from the bone or bone. This allows you to remove the bone or bone and divide the meat into neat pieces. You can do this with fish, poultry, and game, among other things.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Flambéing</h3>
+                <p>A cooking technique in which alcohol is poured over a dish and then ignited to create a flaming effect and add extra flavor. This is often used for desserts like crêpes suzette and meat dishes like steak.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Gratin</h3>
+                <p>A dish, usually made with potatoes or vegetables, covered with a layer of cheese, breadcrumbs, or breadcrumbs and then gratinated (baked) in the oven, creating a crispy crust. You can do this using the broiler setting on your oven, for example, or with a blowtorch. The word "gratin" refers to the golden brown crust. See our potato gratin recipe here.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Gratinating</h3>
+                <p>A technique in which food is baked in the oven to form a golden brown crust, usually with cheese or breadcrumbs. This gives dishes a crispy and flavorful topping.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Julienne</h3>
+                <p>A cutting technique in which food, usually vegetables, is cut into thin strips, similar to matchsticks. Julienne-cut vegetables are often used as a garnish in salads and soups. A very well-known example is carrot julienne.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Marination</h3>
+                <p>The soaking of food in a mixture of, for example, oil, vinegar, herbs, and spices to add flavor and soften it. Marinating enhances the flavor and tenderness of meat, fish, and vegetables.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Whipping</h3>
+                <p>The process of vigorously whipping ingredients, usually egg whites or cream, with a whisk or mixer to trap air bubbles and create a light and airy texture. This is often done when making meringues, whipped cream, and cakes.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Poaching</h3>
+                <p>A cooking technique in which food is gently cooked in a liquid, usually water or broth, without bubbling. Poaching is often used for preparing eggs, fish, and poultry because it produces a tender and even cooking. It preserves flavor well, and no fat is needed to cook the food.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Puree</h3>
+                <p>Food, usually vegetables, fruit, or potatoes, that has been mashed to a smooth, creamy consistency, often seasoned and flavored. Puree can be served as a side dish or as a base for soups and sauces. For example, you can make your own mashed potatoes with potatoes and milk.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Reduce</h3>
+                <p>The process of reducing a liquid by simmering it, concentrating the flavors and thickening the sauce. This is often done to thicken and enhance sauces.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Rolling Ground Meat</h3>
+                <p>The process of frying ground meat in a pan until it is browned and cooked through. While frying, you break the ground meat apart. This is often done when making dishes such as pasta sauce, chili con carne, tacos, and casseroles.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Roux</h3>
+                <p>A mixture of melted butter and flour used as a base for thickening sauces and soups. The roux is first cooked until it reaches the desired color before other ingredients are added.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Sautéing</h3>
+                <p>A cooking method in which food is quickly sautéed in a hot pan with a small amount of oil or butter. This ensures fast cooking and preserves the flavor and texture of the food. It is often used for meat, vegetables, and shrimp.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Sautéing an Onion</h3>
+                <p>Sautéing an onion is the process of frying chopped onions in oil or butter until they are soft and golden brown to bring out their sweet flavor. This is a common step in preparing stews, soups, and sauces.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Simmering</h3>
+                <p>A slow cooking method in which food is cooked over low heat in a covered pot, usually with liquid. Simmering ensures slow and even cooking, making meats and stews flavorful and tender.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Soaking</h3>
+                <p>A cooking method in which food is briefly placed in hot water to prepare it for further cooking. Soaking is often used to soften hard vegetables or loosen the skins of tomatoes, for example. Raisins should also be washed and soaked before using. This makes them softer and juicier.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Sourdough</h3>
+                <p>A type of bread made using a natural fermentation method that uses wild yeast and bacteria to make the dough rise, resulting in a distinct flavor and texture. Sourdough bread has a slightly sour taste and a longer shelf life than regular bread. No baker's yeast is added to sourdough bread. It requires a longer rising time than regular bread.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Sous-vide</h3>
+                <p>Sous-vide, also known as vacuum cooking, is a cooking method in which food is sealed in an airtight bag and cooked slowly and evenly in a water bath at a precise temperature, usually lower than normal. This results in juicy and tender meat or other dishes because the ingredients do not dry out during cooking.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Steaming</h3>
+                <p>A cooking technique in which food is prepared by placing it over a boiling liquid so that the rising steam cooks the food. This is a healthy method because it preserves nutrients. It also creates a juicy texture.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Stir-frying</h3>
+                <p>A quick cooking method in which food is constantly stirred in a pan over high heat, usually with oil, soy sauce, and vegetables. Stir-frying is popular in Asian cuisine and preserves the texture and crunch of vegetables. A wok is often used for this, and it's also called stir-frying.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Thickening (Soup/Sauce Thickening)</h3>
+                <p>Adding a thickening agent, such as flour, cornstarch, or potato starch, to a liquid to thicken its consistency and create sauces or soups. This creates a thick, creamy texture.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Zest</h3>
+                <p>The grated peel of citrus fruits is used to add aroma and flavor to dishes. Zest can be added to desserts, sauces, and cocktails for a fresh citrus kick.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="api/pantry.js"></script>
+    <script>
+      // Topic switching
+      document.querySelectorAll('.topic-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          // Update active button
+          document.querySelectorAll('.topic-btn').forEach(b => b.classList.remove('active'));
+          btn.classList.add('active');
+          
+          // Show corresponding content
+          const topic = btn.dataset.topic;
+          document.querySelectorAll('.tips-content').forEach(content => {
+            content.style.display = 'none';
+          });
+          document.getElementById(topic).style.display = 'block';
+        });
+      });
+
+      // Ingredient selection (placeholder for now)
+      document.querySelectorAll('.tip-box').forEach(box => {
+        box.addEventListener('click', () => {
+          const ingredient = box.dataset.ingredient;
+          showIngredientDetail(ingredient);
+        });
+      });
+
+      // Back button
+      document.getElementById('back-btn').addEventListener('click', () => {
+        document.getElementById('ingredient-detail').style.display = 'none';
+        document.querySelector('.tips-grid').style.display = 'grid';
+      });
+
+      // Function to show ingredient detail
+      function showIngredientDetail(ingredient) {
+        const ingredientData = {
+          'broccoli': {
+            name: 'Broccoli',
+            content: `
+              <div class="ingredient-info-box">
+                <h3>Info</h3>
+                <ul class="info-list">
+                  <li><strong>Cooking time:</strong> 4-5 minutes</li>
+                  <li><strong>Store:</strong> 5-7 days in the refrigerator</li>
+                  <li><strong>Freeze:</strong> Yes, 12 months</li>
+                  <li><strong>Season:</strong> May to November</li>
+                  <li><strong>Preparation:</strong> Boil, steam, stir-fry, grill, or eat raw.</li>
+                </ul>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Cooking broccoli</h3>
+                <p>How long should you cook broccoli? The broccoli florets will be ready in about 4 to 5 minutes. Follow these steps to cook broccoli:</p>
+                <ol>
+                  <li>Place a pan of water on the stove with enough water to just cover the broccoli florets. Add a little salt to the water if necessary.</li>
+                  <li>Wash the broccoli under cold running water and cut into florets.</li>
+                  <li>Add the broccoli florets to the boiling water.</li>
+                  <li>Cook the broccoli for 4-5 minutes, until bright green and crisp-tender.<br>
+                  <em>Tip: Pierce the broccoli stems occasionally with a fork to check if they are done. Don't overcook the broccoli florets, or they'll become soft and mushy. This also detracts from the flavor.</em></li>
+                  <li>Drain the water, or remove the broccoli florets with a slotted spoon and let them drain.</li>
+                </ol>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Preparing Broccoli</h3>
+                
+                <h4>Steaming Broccoli</h4>
+                <p>Fill the pan with about 3 centimeters of water and bring to a boil. Place the broccoli florets in the steamer basket. Covering it will create steam. Steam the broccoli this way for about 4 to 5 minutes until tender.</p>
+
+                <h4>Stir-Frying Broccoli</h4>
+                <p>You can also stir-fry broccoli! Blanch the broccoli first, then stir-fry it in a wok with a little oil. The broccoli will be nice and crispy after about 3 to 4 minutes of stirring over high heat.</p>
+
+                <h4>Roasting Broccoli in the Oven</h4>
+                <p>Roast broccoli in the oven. Preheat the oven to 200 degrees Celsius (400 degrees Fahrenheit) and make sure the broccoli is thoroughly dry. Toss the broccoli with 1 to 2 tablespoons of oil and, if desired, some salt, pepper, garlic powder, or other spices. Roast the broccoli until crispy, about 20 minutes.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Storing Broccoli</h3>
+                <p>Broccoli is best stored in the refrigerator. This way, it stays fresh and delicious the longest. Use the broccoli within 3 to 5 days for the best quality. How long does fresh broccoli last?</p>
+                <p>In the refrigerator, you can keep broccoli for 5 to 7 days. Place it in the crisper drawer and don't wash the broccoli before putting it in the refrigerator. Excess moisture can cause the broccoli to spoil faster.</p>
+                <p>Outside the refrigerator, broccoli keeps for 2 to 3 days.</p>
+                <p>Cooked broccoli can be kept in the refrigerator for a few more days, but it's best to eat it within 2 days.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Freezing Broccoli</h3>
+                <p>If you're not going to use your broccoli all at once, you can easily freeze it. Cut the broccoli into florets, blanch them briefly (2-3 minutes), pat them dry, and place them in a freezer-safe container or freezer bag. Don't forget to write the date on them; you can keep broccoli in the freezer for up to 12 months!</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Questions:</h3>
+                
+                <h4>How much broccoli per person?</h4>
+                <p>Use about 200 grams of broccoli per person as a side dish. A broccoli often weighs between 300 and 500 grams, so the edible portion of half a broccoli per person is a good indicator.</p>
+
+                <h4>Is broccoli healthy?</h4>
+                <p>Broccoli is incredibly healthy. It's rich in vitamins C, K, and folate. It also contains relatively many antioxidants and is low in calories.</p>
+
+                <h4>What do you replace broccoli with?</h4>
+                <p>You can easily replace broccoli with cauliflower, but you can often also use spinach, zucchini, or green asparagus. It just depends on what you like best! You could also use bimi, a type of small, stem-shaped broccoli.</p>
+
+                <h4>When is broccoli in season?</h4>
+                <p>Broccoli is in season from May to November and is grown in the Netherlands. In winter, broccoli is sourced from Spain or Italy.</p>
+
+                <h4>What do you do with the broccoli stems?</h4>
+                <p>You can chop the stems into smaller pieces and cook or steam them with the broccoli florets. You don't actually need to throw the stems away. You can also use them in a soup.</p>
+              </div>
+            `
+          },
+          'cauliflower': {
+            name: 'Cauliflower',
+            content: `
+              <div class="ingredient-info-box">
+                <h3>Info</h3>
+                <ul class="info-list">
+                  <li><strong>Cooking time:</strong> 6-8 minutes</li>
+                  <li><strong>Store:</strong> 7-10 days in the refrigerator</li>
+                  <li><strong>Freeze:</strong> Yes, 12 months</li>
+                  <li><strong>Season:</strong> June to November</li>
+                  <li><strong>Preparation:</strong> Boil, steam, stir-fry, grill, or eat raw</li>
+                </ul>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>How to Cook Cauliflower</h3>
+                <p>How long should you cook cauliflower? Cauliflower takes about 6 to 8 minutes to cook. Here's how to cook cauliflower:</p>
+                <ol>
+                  <li>Bring a pot of water to a boil, making sure the cauliflower florets are just barely covered.</li>
+                  <li>Cut the cauliflower into florets of your choice. Wash them thoroughly.</li>
+                  <li>Once the water is boiling, add the cauliflower florets.</li>
+                  <li>Depending on the size of the florets, cook the cauliflower for 6 to 8 minutes, or until tender.<br>
+                  <em>Tip: Pierce the cauliflower stems occasionally with a fork to check if they are tender enough. Don't overcook the cauliflower, or it will become mushy and smell strongly of cabbage.</em></li>
+                  <li>Drain the cauliflower and serve immediately.</li>
+                </ol>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Preparing Cauliflower</h3>
+                
+                <h4>Baked Cauliflower</h4>
+                <p>Baked cauliflower gets a delicious roasted flavor and a crispy bite. Cut the cauliflower into florets, make sure they are thoroughly dry, toss with olive oil, salt, and herbs to taste, and roast for 20-25 minutes at 200°C (400°F). You can also top with cheese or a tasty sauce before baking.</p>
+
+                <h4>Air Fryer Cauliflower</h4>
+                <p>Toss the cauliflower florets with a little oil and your favorite herbs. Bake them in the Air Fryer at 180°C (350°F) for 10-15 minutes until crispy and golden brown. A quick and healthy option!</p>
+
+                <h4>Steaming Cauliflower</h4>
+                <p>Cut the cauliflower into florets. Fill the pan with about 3 centimeters of water and bring to a boil. Place the cauliflower florets in the steamer basket and steam them over the boiling water for 8-10 minutes. They will stay nice and firm and retain their nutrients.</p>
+
+                <h4>Stir-fry cauliflower</h4>
+                <p>Heat some oil in a wok and fry the cauliflower florets over high heat for about 10 minutes. If you've lightly parboiled them first, they'll only need to be stir-fried for 5 minutes. Add soy sauce or other seasonings for extra spice. Deliciously crispy and ready in no time!</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Cutting Cauliflower</h3>
+                <p>Here's how to cut cauliflower:</p>
+                <ol>
+                  <li>First, remove the green leaves from the cauliflower and trim the bottom of the stem so it's flat.</li>
+                  <li>Place the cauliflower on the cutting board stem-side down and cut it in half with the knife.</li>
+                  <li>Cut the halves into smaller pieces, removing the stems and florets from the core of the cauliflower.</li>
+                  <li>If you want to make cauliflower florets, cut the florets from the stems and, if necessary, halve or quarter the larger florets, depending on the size you want.</li>
+                  <li>You can cut the stems into smaller pieces and cook or steam them along with the cauliflower florets. You don't need to throw away the stems, especially if you're making cauliflower soup.</li>
+                </ol>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Storing Cauliflower</h3>
+                <p>It's best to store cauliflower in the refrigerator. Leave the leaves on it, this way the cauliflower stays fresh and delicious the longest. Use the cauliflower in your meal within 3 to 5 days for the best quality.</p>
+                
+                <h4>How long does fresh cauliflower last?</h4>
+                <p>In the refrigerator, you can keep cauliflower for 7 to 10 days. So leave the leaves on it and place it in the crisper drawer.</p>
+                <p>Outside the refrigerator, cauliflower keeps for 3 to 4 days.</p>
+                <p>Cooked cauliflower can be kept in the refrigerator for a few more days, but it's best to eat it within 2 days.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Freezing Cauliflower</h3>
+                <p>Cauliflower is often quite large. If you don't plan on using it all at once, you can easily freeze it. Cut the cauliflower into florets, blanch them briefly (3 to 4 minutes), pat them dry, and place them in a freezer bag or freezer-safe container. Don't forget to write the date on it, you can keep cauliflower in the freezer for up to 12 months!</p>
+                
+                <h4>Tips:</h4>
+                <ul>
+                  <li>Freezing the cauliflower in small portions makes it easier to defrost only what you need later.</li>
+                  <li>First, place the cauliflower florets on a plate or some parchment paper in the freezer. Once they are mostly frozen, you can transfer them to a bag or container. This prevents them from sticking together. It ensures better quality cauliflower and makes it easier to defrost only the amount you need.</li>
+                </ul>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Questions:</h3>
+                
+                <h4>How much cauliflower per person?</h4>
+                <p>A medium-sized cauliflower is good for 2 people. Count on about 350g per person, so that after cleaning and cooking, there will be 250g left.</p>
+
+                <h4>Is cauliflower healthy?</h4>
+                <p>Yes, cauliflower is incredibly healthy! It's rich in vitamins like vitamin C, vitamin K, and magnesium. It's also high in fiber and low in calories, making it a perfect fit for a healthy lifestyle.</p>
+
+                <h4>When is cauliflower in season?</h4>
+                <p>Cauliflower is in season from June to November and is grown in the Netherlands during that period. Outside of those months, cauliflower comes from greenhouses or from Spain, Italy, or France. So it's available year-round in Dutch supermarkets.</p>
+
+                <h4>How do you know if cauliflower has gone bad?</h4>
+                <p>Not sure if your cauliflower is still edible? Discard it if it's discolored, has mold, feels sticky or moist, has an unpleasant odor, or shows other signs of spoilage.</p>
+              </div>
+            `
+          },
+          'green-asparagus': {
+            name: 'Green asparagus',
+            content: `
+              <div class="ingredient-info-box">
+                <h3>Info</h3>
+                <ul class="info-list">
+                  <li><strong>Cooking time:</strong> 3-5 minutes</li>
+                  <li><strong>Store:</strong> 3-4 days in the refrigerator</li>
+                  <li><strong>Freeze:</strong> Yes, 12 months</li>
+                  <li><strong>Season:</strong> February to June</li>
+                  <li><strong>Preparation:</strong> Boil, grill, roast, stir-fry, steam, or eat raw</li>
+                </ul>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Cooking Green Asparagus</h3>
+                <p>These asparagus are actually just white asparagus, but instead of growing underground, they grow above ground. Preparing green asparagus is a bit easier than white asparagus. You don't have to peel them as much; usually, you only need to peel the bottom and cut off the woody end. These asparagus also require less cooking time. Depending on the thickness, cook them for 3-5 minutes until al dente.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Grilling Green Asparagus</h3>
+                <p>Grill green asparagus for 8 to 10 minutes. Follow these steps for delicious grilled green asparagus:</p>
+                <ol>
+                  <li>Rinse the asparagus and pat dry.</li>
+                  <li>Cut off the tough ends.</li>
+                  <li>Brush the green asparagus with a little olive oil.</li>
+                  <li>Grill the green asparagus for 8 to 10 minutes or cook them in a grill pan.</li>
+                  <li>Turn them so they are grilled on both sides. Be careful, though, as they can cook quickly.</li>
+                  <li>Sprinkle with a little sea salt.</li>
+                </ol>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Storing green asparagus</h3>
+                <p>You can store green asparagus in the refrigerator for 3 to 4 days. It's best to wrap them in a damp tea towel, keeping at least the bottom wet, otherwise they can dry out. We recommend eating them as soon as possible, when they're at their freshest and tastiest. You can also freeze green asparagus, both blanched and unblanched.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Freezing Green Asparagus</h3>
+                <p>Green asparagus is best eaten as soon as possible, while still completely fresh. You can also freeze it. Here's how to freeze green asparagus:</p>
+                <ol>
+                  <li>Wash the green asparagus and cut off the woody ends.</li>
+                  <li>Blanch the green asparagus in boiling water for 2-3 minutes and then cool in (ice) water.</li>
+                  <li>Pat the asparagus dry and place them in a bowl or on some parchment paper in the freezer. Make sure they don't overlap. This prevents them from sticking together and improves the quality of the asparagus.</li>
+                  <li>Freeze them for 1-2 hours and then store them in an airtight freezer bag or freezer-safe container. Make sure to mark the date; you can store the green asparagus in the freezer for 10-12 months.</li>
+                </ol>
+                <p>You can prepare the green asparagus directly from the freezer; there's no need to thaw it first. This freezing method also makes it easy to thaw the right amount.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Green vs. white asparagus</h3>
+                <p>White asparagus grows underground and therefore has a milder and softer flavor, while green asparagus becomes firmer and slightly spicier in sunlight. White asparagus always needs to be peeled and cooked longer, while green asparagus is often left unpeeled and is briefly blanched, stir-fried, or grilled. I find white asparagus perfect for classic dishes, and green asparagus is delicious in quick, refreshing meals!</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Questions:</h3>
+                
+                <h4>How much green asparagus do you need per person?</h4>
+                <p>As a side dish, calculate about 200 grams per person, depending on the portions. If you're using it in another dish, you'll find the quantities with the recipe on my website.</p>
+
+                <h4>Can you eat green asparagus raw?</h4>
+                <p>Yes, you can eat green asparagus raw, for example, thinly sliced or cut into ribbons for a salad. Tip: green asparagus salad with goat cheese</p>
+
+                <h4>Do you have to peel green asparagus?</h4>
+                <p>You usually don't need to peel green asparagus; just cut off the woody bottom (approximately 2 cm). For thick asparagus, you can lightly peel the bottom.</p>
+
+                <h4>What's the difference between green and white asparagus?</h4>
+                <p>Green asparagus grows above ground and has a firmer texture and a slightly nutty flavor. White asparagus grows underground and is softer and more subtle in flavor.</p>
+              </div>
+            `
+          },
+          'brussels-sprouts': {
+            name: 'Brussels Sprouts',
+            content: `
+              <div class="ingredient-info-box">
+                <h3>Info</h3>
+                <ul class="info-list">
+                  <li><strong>Cooking time:</strong> 8-12 minutes</li>
+                  <li><strong>Store:</strong> 5-7 days in the refrigerator</li>
+                  <li><strong>Freeze:</strong> Yes, 12 months</li>
+                  <li><strong>Season:</strong> Oct to Feb</li>
+                  <li><strong>Preparation:</strong> Boil, steam, roast, bake</li>
+                </ul>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Cooking Brussels Sprouts Step-by-Step</h3>
+                <ol>
+                  <li>Wash the Brussels sprouts and cut off the hard ends. Cut too far off, otherwise all the leaves will fall off.</li>
+                  <li>Remove any loose or yellowed outer leaves. These can sometimes be a bit tough.</li>
+                  <li>Fill a large pot with water, add a pinch of salt, and bring to a boil.</li>
+                  <li>When the water boils, add the Brussels sprouts.</li>
+                  <li>Cook them for approximately:
+                    <ul>
+                      <li>Small Brussels sprouts: 4-6 minutes until al dente.</li>
+                      <li>Medium-sized: 8-12 minutes until al dente.</li>
+                    </ul>
+                  </li>
+                  <li>Prick a Brussels sprout with a fork to check if it's tender enough (cooked but not mushy). Don't overcook Brussels sprouts, as this often gives them a bitter taste or "Brussels sprout smell."</li>
+                  <li>Drain and serve immediately, or process further (such as baking or roasting).</li>
+                </ol>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>How do I make Brussels sprouts less bitter?</h3>
+                <ul>
+                  <li>Don't overcook Brussels sprouts.</li>
+                  <li>If desired, add a pinch of sugar or a bouillon cube to the cooking water.</li>
+                  <li>You can also add a splash of milk to the cooking water; this will help reduce the sulfur smell.</li>
+                  <li>After cooking, fry or roast them for a few minutes with a little honey for a sweeter flavor.</li>
+                </ul>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Preparing Brussels Sprouts</h3>
+                <p>Boiling Brussels sprouts is one way, but there's so much more you can do with them.</p>
+                
+                <h4>Roasting in the oven</h4>
+                <p>Halve large Brussels sprouts, drizzle with olive oil, salt, and pepper, and roast for about 20-25 minutes at 200 degrees Celsius (400 degrees Fahrenheit).</p>
+
+                <h4>Stir-frying/baking</h4>
+                <p>First cook briefly until just tender, then fry for 2-3 minutes with, for example, bacon bits or a drizzle of honey.</p>
+
+                <h4>Steaming</h4>
+                <p>Good for preserving color and nutrients; allow about 10-15 minutes for whole Brussels sprouts.</p>
+
+                <h4>Air fryer</h4>
+                <p>Halve the Brussels sprouts, toss them with a little olive oil, salt, and pepper (optionally with some balsamic vinegar or honey for extra flavor), and bake for 10-15 minutes at 180 degrees Celsius (350 degrees Fahrenheit). Toss halfway through cooking to ensure even browning.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Cleaning Brussels Sprouts</h3>
+                <p>How to do it:</p>
+                <ul>
+                  <li>Check that the Brussels sprouts feel firm and have an even green color.</li>
+                  <li>Remove the outermost tip (approximately 5 mm) of each sprout.</li>
+                  <li>Remove the outer leaves if they are brown or yellow.</li>
+                  <li>Rinse the Brussels sprouts briefly under cold running water.</li>
+                  <li>(Optional) Cut a small cross into the stem. This ensures even cooking and faster cooking.</li>
+                </ul>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Storing Brussels Sprouts</h3>
+                
+                <h4>In the Refrigerator</h4>
+                <ul>
+                  <li>Raw in the crisper drawer, preferably in an open bag: keeps for approximately 5-7 days.</li>
+                  <li>Outside the refrigerator: only keeps for 2-3 days.</li>
+                  <li>Wash Brussels sprouts just before cooking, not beforehand, to prevent them from drying out or wilting.</li>
+                </ul>
+
+                <h4>Freezing</h4>
+                <ul>
+                  <li>Clean the Brussels sprouts as described above.</li>
+                  <li>Blanch them briefly (3-5 minutes, depending on their size) in boiling water.</li>
+                  <li>Then immediately plunge them into ice water to stop the cooking process.</li>
+                  <li>Drain well and dry the Brussels sprouts slightly.</li>
+                  <li>Divide into portions and pack in a freezer bag or container.</li>
+                  <li>Freeze at -18°C or colder; keeps for approximately 12 months.</li>
+                </ul>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Questions:</h3>
+                
+                <h4>How many Brussels sprouts per person?</h4>
+                <p>On average, you can count on 200 to 250 grams of fresh Brussels sprouts per person as a main vegetable.</p>
+                <ul>
+                  <li>Adults: 200 to 250 grams is a good portion, especially if Brussels sprouts are the main vegetable in the meal (such as in a mashed potato or casserole).</li>
+                  <li>Children: count on 100 to 150 grams per child, depending on their age and whether they are accompanied by other vegetables or salad.</li>
+                </ul>
+
+                <h4>Can you eat Brussels sprouts raw?</h4>
+                <p>Yes, you can. Finely chopped raw Brussels sprouts are delicious in a salad, for example, with apple, nuts, and a fresh dressing. But be careful: because Brussels sprouts are part of the cabbage family, they can cause some gas or stomach upset if eaten raw. I slice them extra thinly (with a mandolin or sharp knife) and mix them with something acidic, like lemon juice or vinegar, which makes them milder in flavor and more digestible.</p>
+
+                <h4>When are Brussels sprouts delicious and fresh?</h4>
+                <p>"Dutch" Brussels sprouts are in peak season from approximately October to February. Outside of that season, they're often imported. So, they're at their tastiest and most sustainable to buy in winter.</p>
+
+                <h4>Are Brussels sprouts healthy?</h4>
+                <p>Yes! Brussels sprouts are packed with vitamin C, K, and fiber, and are low in calories. They boost your immune system, are good for your gut, and help keep your body healthy. My tip: don't cook them too long; this way, the flavor and vitamins are better preserved.</p>
+              </div>
+            `
+          },
+          'zucchini': {
+            name: 'Zucchini',
+            content: `
+              <div class="ingredient-info-box">
+                <h3>Info</h3>
+                <ul class="info-list">
+                  <li><strong>(Stir)fry:</strong> 5-7 minutes</li>
+                  <li><strong>Grill:</strong> 3-4 minutes (depending on thickness)</li>
+                  <li><strong>Oven:</strong> 20 minutes - 200°C</li>
+                  <li><strong>Season:</strong> February to November</li>
+                  <li><strong>Preparation:</strong> Boil, steam, stir-fry, grill, or eat raw</li>
+                </ul>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Storing Zucchini</h3>
+                
+                <h4>Storing Outside the Refrigerator</h4>
+                <p>It's best to store zucchini in a cool, dry, and dark place outside the refrigerator, such as a cellar or pantry. This way, uncut zucchini often lasts 4 to 6 days, sometimes even a week, without losing its texture or flavor. It's recommended to store zucchini outside the refrigerator. This prevents it from becoming limp and bitter.</p>
+
+                <h4>Storing in the Refrigerator or Freezer</h4>
+                <p>If you've already cut zucchini, store the rest in the refrigerator wrapped in plastic wrap or a tightly sealed container. It will stay fresh for 2 to 3 days in the crisper or the coldest part of your refrigerator. You can also store zucchini in the freezer, provided you blanch the slices or cubes first to prevent discoloration and mushyness. You can then store these cubes for up to 12 months.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>What's the best way to prepare zucchini?</h3>
+                
+                <h4>Frying zucchini</h4>
+                <p>Cut into half slices and fry in oil for 5-7 minutes. Add garlic and Italian herbs for extra flavor.</p>
+
+                <h4>Grilling zucchini</h4>
+                <p>Cut into slices and grill on each side for 3-4 minutes. Delicious with a little lemon juice. Also great on the BBQ!</p>
+
+                <h4>Baked zucchini</h4>
+                <p>Cut into thin slices, place on baking paper, sprinkle with salt, pepper, and cheese. Bake for 20 minutes at 200°C (400°F).</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Is zucchini healthy?</h3>
+                <p>Absolutely, zucchini is super healthy. This vegetable contains hardly any calories, is packed with water, and is rich in fiber. It also contains vitamin C, B6, and folic acid, as well as minerals like potassium and magnesium. That makes it perfect if you're watching your diet, or just want something nutritious that's also easily digestible.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>When is zucchini in season?</h3>
+                <p>Zucchini is in season in the Netherlands from June to September. That's when they're at their tastiest and cheapest. Do you have your own vegetable garden? Then you probably know how quickly such a plant can get out of hand—in no time you'll have about 10 of them. Fortunately, you can do all sorts of things with it (and freeze it if you really have too much stock). Zucchini is available in supermarkets year-round, but most are home-grown from June to September.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Questions:</h3>
+                
+                <h4>Can you eat zucchini raw?</h4>
+                <p>Absolutely! You can eat zucchini raw, for example, in thin ribbons or slices. I personally love it in a salad with lemon, feta, and mint. It has a mild, fresh flavor and stays nice and crunchy. I do recommend washing the zucchini thoroughly beforehand. If it tastes bitter, don't eat it; it's probably gone bad.</p>
+
+                <h4>What's the difference between green and yellow zucchini?</h4>
+                <p>I honestly don't think there's much difference. They're both just zucchini, but the yellow variety is slightly softer and milder in flavor. Of course, you can choose your preference. I especially like it for adding color to the plate!</p>
+
+                <h4>Do I need to peel zucchini before using it?</h4>
+                <p>No, peeling isn't necessary. The skin is edible and contains many nutrients. Just wash it thoroughly before using. If you look at my recipes, you'll see that I never peel the zucchini myself.</p>
+
+                <h4>What should you look for when buying zucchini?</h4>
+                <p>I look for firmness and color: a nice dark green (or yellow) without dents or soft spots. The skin should be firm and smooth. Wrinkles or spots are a sign that the zucchini is a bit older. A zucchini of about 15 to 20 cm is best: young and juicy, with a mild flavor and few seeds. Very large zucchini can be a bit mealy or watery. Also good to know: the lighter the zucchini feels, the more moisture it probably contains. So, if you want to grill or bake it without it getting soggy, go for a firm and compact one.</p>
+
+                <h4>Are eggplant and zucchini related?</h4>
+                <p>I see eggplant and zucchini as cousins: both are nightshades (just like tomatoes and bell peppers), fruiting vegetables with seeds, but with different personalities. Zucchini grows on a creeping plant and has a mild and refreshing flavor; eggplant grows on a taller bush and is firmer and fuller. When I cook, I like to combine them because zucchini provides freshness, while eggplant provides bite and creaminess. When I prepare them together, I salt the eggplant for 10 minutes, then pat it dry before frying it until golden brown. I add the zucchini later to prevent it from getting soggy.</p>
+              </div>
+            `
+          },
+          'rice': {
+            name: 'Rice',
+            content: `
+              <div class="ingredient-info-box">
+                <h3>Info</h3>
+                <ul class="info-list">
+                  <li><strong>Cooking time:</strong> ± 10 minutes</li>
+                  <li><strong>Keep cooked:</strong> 2-3 days in the refrigerator</li>
+                  <li><strong>Freeze cooked:</strong> Yes, 3 months</li>
+                  <li><strong>Keep uncooked:</strong> Years, provided it is kept cool and dry</li>
+                </ul>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Cooking Rice</h3>
+                <p>How do you cook rice and how long should you cook it? Cooking times vary slightly depending on the type of rice; check the packaging. Follow these steps, and you're sure to succeed:</p>
+                <ol>
+                  <li>Check if the rice needs to be washed.</li>
+                  <li>Place a pan on the stove and add a pinch of salt if needed. Add 1 cup of rice and 2 cups of water per person.</li>
+                  <li>Simmer gently for about 10 minutes with the lid slightly tilted or closed. Stir once or twice and check if all the water has been absorbed.</li>
+                  <li>Taste to see if the rice is ready, turn off the heat, and let it steam for another 5 minutes with the lid on. If you want to cook the rice a little longer, add a splash of water and simmer gently until the water is absorbed.</li>
+                </ol>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>How much rice per person?</h3>
+                <p>On average, you need 75g of rice per person. I use 1 cup of rice and 2 cups of water per person. I use a teacup for this, but it just depends on your appetite. It's helpful to remember which cup you always use so you have enough rice, but not too much. All the water will be absorbed by the rice. Or use a little more and strain the rice afterward.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Cooking Basmati Rice</h3>
+                <p>Preparing basmati rice starts by washing the rice until the water runs clear. Then, place 1 cup of rice and 2 cups of water per person in a saucepan. Add a pinch of salt if desired and bring to a boil. Simmer the rice for 10 minutes with the lid slightly open or closed, stirring once or twice.</p>
+                <p>When the water has been absorbed, taste to see if the rice is ready, turn off the heat, and let the rice steam for another 5 minutes with the lid on. This is how you get perfect, fluffy basmati rice!</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Cooking Pandan Rice</h3>
+                <p>Pandan rice is also called jasmine rice. To cook pandan rice, wash the rice under cold water until the water runs clear. Then, place 1 cup of rice and 2 cups of water per person in a saucepan. Add a pinch of salt if desired and bring to a boil. Simmer the rice for 10 minutes with the lid slightly open or closed, stirring once or twice. Once the water has been absorbed, taste the rice to see if it's ready. If you want the rice to cook a little longer, add a splash more water. Then turn off the heat and let the rice steam for another 5 minutes with the lid on the pan.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Cooking risotto rice</h3>
+                <p>Risotto rice cooks perfectly soft and creamy in about 20 minutes. First, heat the stock, using about 225 ml of stock for every 75 grams of rice. Heat a little oil or butter in a heavy-bottomed pan. Add the risotto rice and cook briefly until translucent. Add a ladleful of stock and stir. Only add another ladleful of stock once the previous one has been completely absorbed by the rice. The rice will be cooked through in about 20 minutes. Stir in a knob of butter and season with salt, pepper, and other herbs to taste.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Cooking sushi rice</h3>
+                <p>Sushi rice is prepared differently than other types of rice. These days, most supermarkets sell pre-packaged sushi rice that you simply microwave, saving you time and effort.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Questions:</h3>
+                
+                <h4>When do you use which rice?</h4>
+                <p>Quick-cooking rice is ideal when you're short on time and is ready quickly. Basmati and pandan rice complement Asian dishes well thanks to their aroma and flavor. Basmati rice has long, dry grains with a nutty flavor and pairs well with Indian dishes. Pandan rice is slightly moister, stickier, and has a subtle pandan aroma, making it ideal for Thai and Asian dishes. Brown rice is ideal for adding fiber and nutrients to healthy meals.</p>
+
+                <h4>How do you prevent rice from sticking?</h4>
+                <p>Wash the rice thoroughly under cold water before cooking to remove excess starch. Also, follow the correct water-to-rice ratio and let the rice rest for a few minutes after cooking with the lid on the pan. I always use 1 part rice to 2 parts water.</p>
+
+                <h4>Is rice healthy?</h4>
+                <p>Rice is a good source of energy due to its carbohydrates and contains fiber and healthy nutrients. It's also gluten-free and low in fat. For an extra healthy choice, choose whole-grain varieties like brown rice or brown rice, while white rice is a lighter option that pairs well with lots of vegetables.</p>
+
+                <h4>Can you reheat rice?</h4>
+                <p>Yes, but make sure you cool the rice quickly and store it in the refrigerator. Eat the rice within 1-2 days and reheat it thoroughly for a second time.</p>
+
+                <h4>What's the difference between white and brown rice?</h4>
+                <p>Brown rice contains the outer layer of the rice grain, which gives it more fiber, vitamins, and minerals. White rice is refined and therefore lighter in texture, but also less nutritious.</p>
+              </div>
+            `
+          },
+          'potatoes': {
+            name: 'Potatoes',
+            content: `
+              <div class="ingredient-info-box">
+                <h3>Info</h3>
+                <ul class="info-list">
+                  <li><strong>Cooking time:</strong> 10-15 minutes in pieces</li>
+                  <li><strong>Storage:</strong> Cool and dry for up to 1 month</li>
+                  <li><strong>Freeze:</strong> Yes, cooked for up to 12 months</li>
+                  <li><strong>Season:</strong> Waxy and floury from August to winter</li>
+                  <li><strong>Preparation:</strong> Boil, bake, fry, oven, etc.</li>
+                </ul>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>How long should you boil potatoes?</h3>
+                <p>If you put the potatoes whole in the water (without cutting them), they should boil for 18 to 20 minutes. If you cut the potatoes into smaller pieces, it will take about 10 to 15 minutes for the potatoes to be cooked. Extra floury potatoes only need to boil for 10 minutes. These are perfect for mashed potatoes, soup, or stews.</p>
+                <p>To test if your potatoes are cooked through, you can poke them with a fork. If the potato slides off, they're done. If you feel resistance, boil the potatoes for another minute and poke them again.</p>
+                <p>Floury potatoes only need a little water, while waxy potatoes need a little more water. They can easily be just covered.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>How many potatoes per person?</h3>
+                <p>Per person, you'll need about 4 to 5 medium-sized potatoes. This amounts to about 280 to 350 grams of potatoes for dinner. This is the Nutrition Center's guideline for adults. For children, you can, of course, use a little less, depending on their age and appetite.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Floury or waxy potatoes?</h3>
+                <p>Not sure which potato to use? There are two main differences: waxy and floury potatoes:</p>
+                <p>Waxy potatoes are firmer, while floury potatoes tend to break down more quickly.</p>
+                <p>Waxy potatoes are delicious baked, in salads, casseroles, or stir-fries. Floury potatoes, on the other hand, are ideal for mashed potatoes, mashed potatoes, or deep-frying.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>How do you store potatoes and for how long?</h3>
+                <p>Potatoes are best stored in a cool, dark place. They'll keep for about a month; you'll notice it when they start to soften. Tip: don't store them next to onions, as they'll spoil faster.</p>
+                <p>You can also store potatoes in the refrigerator, but this isn't ideal. They'll keep for 2 to 3 weeks.</p>
+                <p>You can also store potatoes in the freezer, but prepare them first. Boil, blanch, or bake the potatoes, or make mashed potatoes. Let them cool completely and freeze in portions. You can keep them for 6 to 12 months. Handy if you want to stock up!</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Are potatoes healthy?</h3>
+                <p>Potatoes are part of a healthy, varied diet. They contain more vitamins and minerals, such as potassium and vitamin C, and fewer calories than pasta and rice. They also contain fewer carbohydrates and more fiber. So don't forget to eat potatoes occasionally.</p>
+                <p>Of course, it does depend on how you prepare the potatoes. It's better to boil potatoes than to fry or bake them. This is because of the fats used in frying and baking. In that case, don't add salt to the water when boiling.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Questions:</h3>
+                
+                <h4>When are potatoes in season in the Netherlands?</h4>
+                <p>Potatoes are available year-round in the Netherlands, but the season varies by variety. New potatoes (early potatoes) are available from May to July, waxy and floury potatoes from August into winter, and storage potatoes from October to April.</p>
+
+                <h4>Can you eat potatoes if they have sprouts?</h4>
+                <p>You can remove small sprouts and still eat the potatoes, but not long or green sprouts. Discard potatoes if they are soft, wrinkled, green, moldy, or rotten.</p>
+
+                <h4>Do you have to peel potatoes before cooking?</h4>
+                <p>Not necessarily. The skin contains fiber and nutrients and can be cooked with the potatoes. Scrub the potatoes thoroughly beforehand. If you're making a mashed potato, it's obviously a good idea to peel them.</p>
+
+                <h4>Are potatoes considered vegetables?</h4>
+                <p>No, potatoes are not officially considered vegetables. They are classified in the same category as bread and grains. Potatoes contain several vitamins and minerals that you won't find in pasta and rice. That's why potatoes are sometimes considered a vegetable in other countries.</p>
+              </div>
+            `
+          },
+          'pasta': {
+            name: 'Pasta',
+            content: `
+              <div class="ingredient-info-box">
+                <h3>Info</h3>
+                <ul class="info-list">
+                  <li><strong>Cooking time:</strong> Average 7-10 minutes</li>
+                  <li><strong>Storage:</strong> Store in a dry, airtight container for up to 2 years</li>
+                  <li><strong>Freezing:</strong> Cooked pasta for up to 3 months and fresh pasta for up to 8 months</li>
+                  <li><strong>Preparation:</strong> Cook, gratinate, use in casseroles or salads, etc.</li>
+                </ul>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>How many grams of pasta per person?</h3>
+                <p>Are you cooking a delicious pasta dish tonight? Then calculate about 80 to 100 grams of uncooked pasta per person. For smaller eaters, such as children and teenagers, you can calculate about 50 to 75 grams of uncooked pasta. For fresh pasta, calculate about 120-150 grams per person.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>How do you cook pasta?</h3>
+                <ol>
+                  <li>Bring a large amount of water to a boil. Calculate 1 liter per 100 grams of pasta.</li>
+                  <li>Add salt (10 grams per liter of water) for extra flavor.</li>
+                  <li>Add the pasta and stir briefly to prevent sticking.</li>
+                  <li>Cook according to the package directions (or see cooking time below).</li>
+                  <li>Drain the pasta and toss with sauce or a drizzle of olive oil, if desired.</li>
+                </ol>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>How long should pasta cook?</h3>
+                <p>Cooking times vary by type of pasta. You can find the exact cooking times on the pasta packaging. Here are some general cooking times for different types of pasta:</p>
+                <ul>
+                  <li>Spaghetti cooks for 8-10 minutes</li>
+                  <li>Tagliatelle cooks for 7-9 minutes</li>
+                  <li>Shaped pasta, such as fusilli, farfalle, and penne, cooks for 11-13 minutes</li>
+                  <li>Macaroni cooks for 7-9 minutes</li>
+                  <li>Fresh pasta often only needs to cook for 3-4 minutes</li>
+                </ul>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>How do you store pasta and for how long?</h3>
+                
+                <h4>Uncooked pasta</h4>
+                <ul>
+                  <li>Dry pasta (e.g., spaghetti, penne) – 1 to 2 years after the best-before date on the packaging, if stored tightly sealed and dry.</li>
+                  <li>Fresh pasta (e.g., refrigerated or homemade) – 2 to 5 days in the refrigerator, or up to 8 months in the freezer. When thawing, you can place it directly in boiling water without letting it thaw first.</li>
+                </ul>
+
+                <h4>Cooked pasta</h4>
+                <ul>
+                  <li>In the refrigerator – 3 to 5 days, sealed airtight.</li>
+                  <li>In the freezer – Up to 3 months, sealed airtight and without sauce for the best texture.</li>
+                </ul>
+                <p>If you want to freeze pasta with sauce, choose tomato sauce or pesto (cream sauce can separate when thawed).</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Is pasta healthy?</h3>
+                <p>People often don't think of pasta as a healthy meal, but pasta can be a healthy choice, depending on the type. I've listed them below.</p>
+                <ul>
+                  <li>White pasta (the pasta we often find "regular" in the supermarket) contains fast-digesting carbohydrates and little fiber, making it faster to digest and less filling. This pasta will keep you feeling full longer.</li>
+                  <li>Whole-wheat pasta contains more fiber, vitamins, and minerals, which provides long-lasting energy.</li>
+                  <li>Protein-rich pasta, such as lentil or chickpea pasta, contains more protein and fiber, making it more filling and often used by people who exercise frequently or follow a low-carb diet.</li>
+                </ul>
+                <p>Pasta itself is low in fat and provides energy, but the nutritional value varies by type of pasta. Whole-wheat and protein-rich varieties are the best choice if you want to keep your diet in mind.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>What can you replace pasta with?</h3>
+                <p>Do you love pasta but want to choose a healthier alternative? Pasta can be replaced with zucchini spaghetti or pumpkin noodles for a low-carb meal. Cauliflower rice or quinoa are good alternatives if you're trying to eat fewer grains (you can often find these in the freezer section of the supermarket). Glass noodles or gnocchi are also tasty substitutes, but they do have a different texture.</p>
+              </div>
+
+              <div class="ingredient-section">
+                <h3>Questions:</h3>
+                
+                <h4>Does pasta contain gluten?</h4>
+                <p>Yes, regular pasta contains gluten because it's made from wheat. The wheat provides its elasticity and firmness. Do you have a gluten intolerance? Then it's better to choose gluten-free alternatives such as rice pasta, corn pasta, or pasta made from lentils, chickpeas, or buckwheat. Always check the packaging to ensure the pasta is gluten-free.</p>
+
+                <h4>Which is healthier, pasta or potatoes?</h4>
+                <p>Potatoes and whole-wheat pasta are somewhat similar in nutritional value, but differ in micronutrients. Whole-wheat pasta contains more iron, magnesium, phosphorus, and B1, while potatoes contain more potassium, vitamins B2, B6, and C. Both are healthy (of course, it also depends on the amount), so the best choice depends on what you're looking for: more fiber and minerals? Go for whole-wheat pasta. Extra vitamins and potassium? Then choose potatoes.</p>
+
+                <h4>Is orzo also a type of pasta?</h4>
+                <p>Yes, orzo is a type of pasta, even though it looks like rice. It's made from wheat and is often used in soups, salads, or as a rice substitute in dishes like risotto.</p>
+
+                <h4>Can you eat pasta every day?</h4>
+                <p>Yes, you can eat pasta every day, as long as you combine it with a variety of vegetables, proteins, and healthy fats. Also, pay close attention to your portion sizes. Alternate with other carbohydrate sources to keep your diet balanced.</p>
+              </div>
+            `
+          }
+        };
+
+        const data = ingredientData[ingredient];
+        if (data) {
+          document.getElementById('ingredient-name').textContent = data.name;
+          document.getElementById('ingredient-info').innerHTML = data.content;
+          document.querySelector('.tips-grid').style.display = 'none';
+          document.getElementById('ingredient-detail').style.display = 'block';
+        }
+      }
+    </script>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+          <div class="footer-left">
+            <a href="index.html">
+              <img src="avatars/logo.png" alt="BakeMatch logo" />
+            </a>
+          </div>
+
+          <div class="footer-center">
+            <section class="social-logos" aria-label="Social links">
+              <div class="social-logos-inner">
+                <a href="https://twitter.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                  <span class="logo-btn"><img src="icons/twitter.svg" alt="Twitter logo" /></span>
+                </a>
+
+                <a href="https://www.youtube.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                  <span class="logo-btn"><img src="icons/youtube.svg" alt="YouTube logo" /></span>
+                </a>
+
+                <a href="https://www.facebook.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                  <span class="logo-btn"><img src="icons/facebook.svg" alt="Facebook logo" /></span>
+                </a>
+
+                <a href="https://www.instagram.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                  <span class="logo-btn"><img src="icons/instagram.svg" alt="Instagram logo" /></span>
+                </a>
+
+                <a href="https://www.tiktok.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                  <span class="logo-btn"><img src="icons/tiktok.svg" alt="TikTok logo" /></span>
+                </a>
+              </div>
+            </section>
+          </div>
+
+          <div class="footer-right">
+            <div class="footer-newsletter">
+              <h4>Join our newsletter</h4>
+              <form class="newsletter-form" action="#" method="post">
+                <input
+                  id="newsletter-email"
+                  type="email"
+                  placeholder="Your email"
+                  aria-label="Email"
+                  required
+                />
+                <button class="btn-newsletter" type="submit">Subscribe</button>
+              </form>
+            </div>
+          </div>
+
+        <p class="footer-copy">
+          © 2025 BakeMatch • <a href="#">Privacy</a> • <a href="#">Terms</a>
+        </p>
+      </div>
+    </footer>
+    <script src="js/pantry.js"></script>
+    <script src="js/ai-chatbot.js"></script>
+  </body>
+</html>

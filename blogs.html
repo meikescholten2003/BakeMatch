@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>BakeMatch - Blogs & Reviews</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <h1>Filter</h1>
+        <div class="filter-section">
+          <h3>Categories</h3>
+          <label class="filter-checkbox">
+            <input type="checkbox" value="tips" checked />
+            <span>Baking Tips</span>
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" value="reviews" checked />
+            <span>Recipe Reviews</span>
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" value="community" checked />
+            <span>Community Stories</span>
+          </label>
+          <label class="filter-checkbox">
+            <input type="checkbox" value="guides" checked />
+            <span>How-to Guides</span>
+          </label>
+        </div>
+
+        <div class="filter-section">
+          <h3>Sort By</h3>
+          <select id="sort-select" class="sort-dropdown">
+            <option value="recent">Most Recent</option>
+            <option value="popular">Most Popular</option>
+            <option value="helpful">Most Helpful</option>
+          </select>
+        </div>
+
+        <button class="btn-search">
+          Apply Filters
+        </button>
+      </aside>
+
+      <main class="main-content">
+        <header>
+          <div class="logo">
+            <a href="index.html">
+              <img src="avatars/logo.png" alt="BakeMatch Logo" />
+            </a>
+          </div>
+          <nav>
+            <a href="index.html" class="nav-item">Home</a>
+            <a href="recipe-overview.html" class="nav-item">Recipes</a>
+            <a href="favorites.html" class="nav-item">Favorites</a>
+            <a href="tips.html" class="nav-item">Tips</a>
+            <a href="blogs.html" class="nav-item active">Blogs</a>
+            <a href="about.html" class="nav-item">About</a>
+          </nav>
+          <div class="actions">
+            <button class="action-btn ai">AI</button>
+            <a href="profile.html" class="action-btn profile">Profile</a>
+          </div>
+        </header>
+
+        <section class="page-header">
+          <h1>Community Blogs & Reviews</h1>
+          <p>Share your baking experiences, tips, and help fellow bakers succeed!</p>
+        </section>
+
+        <section class="blog-actions">
+          <button class="btn-primary" id="write-blog-btn">
+            <span>✍️</span> Write a Blog Post
+          </button>
+          <button class="btn-primary" id="write-review-btn">
+            <span>⭐</span> Write a Review
+          </button>
+        </section>
+
+        <section class="blog-posts">
+          <!-- Featured Blog Post -->
+          <article class="blog-card featured">
+            <div class="blog-image">
+              <img src="images/sourdough-bread.jpg" alt="Featured blog" />
+              <span class="blog-badge">Featured</span>
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-category tips">Baking Tips</span>
+                <span class="blog-date">2 days ago</span>
+              </div>
+              <h2>10 Essential Tips for Perfect Sourdough Bread</h2>
+              <p>After years of trial and error, I've finally mastered the art of sourdough. Here are my top 10 tips that transformed my baking and will help you achieve that perfect crust and airy crumb...</p>
+              <div class="blog-footer">
+                <div class="blog-author">
+                  <img src="avatars/Amanda Baker.png" alt="Author" />
+                  <span>Amanda Baker</span>
+                </div>
+                <div class="blog-stats">
+                  <span>❤️ 234</span>
+                  <span>💬 45</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Regular Blog Posts -->
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="images/cookies-baking.jpg" alt="Blog post" />
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-category community">Community Stories</span>
+                <span class="blog-date">3 days ago</span>
+              </div>
+              <h3>How I Turned My Grandma's Recipe Into a Small Business</h3>
+              <p>My grandmother's chocolate chip cookies were always the family favorite. Last year, I decided to share them with the world...</p>
+              <div class="blog-footer">
+                <div class="blog-author">
+                  <img src="avatars/Maria Rodriguez.png" alt="Author" />
+                  <span>Maria Rodriguez</span>
+                </div>
+                <div class="blog-stats">
+                  <span>❤️ 156</span>
+                  <span>💬 28</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="images/banana-bread.jpg" alt="Review post" />
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-category reviews">Recipe Reviews</span>
+                <span class="blog-date">5 days ago</span>
+              </div>
+              <h3>Review: Classic Banana Bread - A Family Hit!</h3>
+              <p>I tried the Classic Banana Bread recipe from BakeMatch, and it was absolutely perfect! My kids couldn't get enough. Here are my modifications and tips...</p>
+              <div class="blog-footer">
+                <div class="blog-author">
+                  <img src="avatars/John Peterson.png" alt="Author" />
+                  <span>John Peterson</span>
+                </div>
+                <div class="blog-stats">
+                  <span>❤️ 89</span>
+                  <span>💬 12</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="images/yeast-guide.jpg" alt="Guide post" />
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-category guides">How-to Guides</span>
+                <span class="blog-date">1 week ago</span>
+              </div>
+              <h3>Beginner's Guide to Understanding Yeast</h3>
+              <p>Confused about active dry yeast vs instant yeast? This comprehensive guide breaks down everything you need to know about working with yeast...</p>
+              <div class="blog-footer">
+                <div class="blog-author">
+                  <img src="avatars/Sarah Chen.png" alt="Author" />
+                  <span>Sarah Chen</span>
+                </div>
+                <div class="blog-stats">
+                  <span>❤️ 312</span>
+                  <span>💬 67</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="images/cookie-spread.jpg" alt="Help post" />
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-category tips">Baking Tips</span>
+                <span class="blog-date">1 week ago</span>
+              </div>
+              <h3>Help! Why Do My Cookies Always Spread Too Much?</h3>
+              <p>After dozens of flat cookies, I finally figured out the problem. Here's what I learned about temperature, butter consistency, and dough chilling...</p>
+              <div class="blog-footer">
+                <div class="blog-author">
+                  <img src="avatars/Lisa Thompson.png" alt="Author" />
+                  <span>Lisa Thompson</span>
+                </div>
+                <div class="blog-stats">
+                  <span>❤️ 445</span>
+                  <span>💬 123</span>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <article class="blog-card">
+            <div class="blog-image">
+              <img src="images/apple-pie.jpg" alt="Review post" />
+            </div>
+            <div class="blog-content">
+              <div class="blog-meta">
+                <span class="blog-category reviews">Recipe Reviews</span>
+                <span class="blog-date">2 weeks ago</span>
+              </div>
+              <h3>Apple Pie Recipe Review: Best Crust Ever!</h3>
+              <p>I've tried many apple pie recipes, but this one from BakeMatch has the flakiest, most buttery crust I've ever made. Here's my experience and a few tweaks I made...</p>
+              <div class="blog-footer">
+                <div class="blog-author">
+                  <img src="avatars/David Kim.png" alt="Author" />
+                  <span>David Kim</span>
+                </div>
+                <div class="blog-stats">
+                  <span>❤️ 198</span>
+                  <span>💬 34</span>
+                </div>
+              </div>
+            </div>
+          </article>
+        </section>
+
+        <section class="load-more">
+          <button class="btn-secondary">Load More Posts</button>
+        </section>
+      </main>
+    </div>
+
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <div class="footer-left">
+          <a href="index.html">
+            <img src="avatars/logo.png" alt="BakeMatch logo" />
+
+        <div class="footer-center">
+          <section class="social-logos" aria-label="Social links">
+            <div class="social-logos-inner">
+              <a href="https://twitter.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                <span class="logo-btn"><img src="icons/twitter.svg" alt="Twitter logo" /></span>
+              </a>
+
+              <a href="https://www.youtube.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <span class="logo-btn"><img src="icons/youtube.svg" alt="YouTube logo" /></span>
+              </a>
+
+              <a href="https://www.facebook.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <span class="logo-btn"><img src="icons/facebook.svg" alt="Facebook logo" /></span>
+              </a>
+
+              <a href="https://www.instagram.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <span class="logo-btn"><img src="icons/instagram.svg" alt="Instagram logo" /></span>
+              </a>
+
+              <a href="https://www.tiktok.com" class="social-link" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+                <span class="logo-btn"><img src="icons/tiktok.svg" alt="TikTok logo" /></span>
+              </a>
+            </div>
+          </section>
+        </div>
+
+        <div class="footer-right">
+          <div class="footer-newsletter">
+            <h4>Join our newsletter</h4>
+            <form class="newsletter-form" action="#" method="post">
+              <input
+                id="newsletter-email"
+                type="email"
+                placeholder="Your email"
+                aria-label="Email"
+                required
+              />
+              <button class="btn-newsletter" type="submit">Subscribe</button>
+            </form>
+          </div>
+        </div>
+
+        <p class="footer-copy">
+          © 2025 BakeMatch • <a href="#">Privacy</a> • <a href="#">Terms</a>
+        </p>
+      </div>
+    </footer>
+
+    <!-- Write Blog Post Modal -->
+    <div id="blog-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Write a Blog Post</h2>
+          <button class="modal-close" id="close-blog-modal">&times;</button>
+        </div>
+        <form id="blog-form" class="blog-form">
+          <div class="form-group">
+            <label for="blog-title">Post Title *</label>
+            <input type="text" id="blog-title" placeholder="Enter a catchy title for your blog post" required />
+          </div>
+
+          <div class="form-group">
+            <label for="blog-category">Category *</label>
+            <select id="blog-category" required>
+              <option value="">Select a category</option>
+              <option value="tips">Baking Tips</option>
+              <option value="community">Community Stories</option>
+              <option value="guides">How-to Guides</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="blog-content">Content *</label>
+            <textarea id="blog-content" rows="10" placeholder="Share your baking story, tips, or guide..." required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="blog-image">Featured Image (Optional)</label>
+            <div class="custom-file-upload">
+              <input type="file" id="blog-image" accept="image/*" class="file-input" />
+              <label for="blog-image" class="file-label">
+                <span class="file-button">Choose File</span>
+                <span class="file-name" id="blog-image-name">No file selected</span>
+              </label>
+            </div>
+            <small>Upload a cover image for your blog post</small>
+          </div>
+
+          <div class="form-group">
+            <label for="blog-tags">Tags (Optional)</label>
+            <input type="text" id="blog-tags" placeholder="e.g., sourdough, bread, beginner-friendly" />
+            <small>Separate tags with commas</small>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn-cancel" id="cancel-blog">Cancel</button>
+            <button type="submit" class="btn-submit">Publish Post</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Write Review Modal -->
+    <div id="review-modal" class="modal">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Write a Recipe Review</h2>
+          <button class="modal-close" id="close-review-modal">&times;</button>
+        </div>
+        <form id="review-form" class="blog-form">
+          <div class="form-group">
+            <label for="review-recipe">Recipe Name *</label>
+            <input type="text" id="review-recipe" placeholder="Which recipe did you try?" required />
+          </div>
+
+          <div class="form-group">
+            <label>Rating *</label>
+            <div class="star-rating">
+              <input type="radio" id="star5" name="rating" value="5" required />
+              <label for="star5" title="5 stars">★</label>
+              <input type="radio" id="star4" name="rating" value="4" />
+              <label for="star4" title="4 stars">★</label>
+              <input type="radio" id="star3" name="rating" value="3" />
+              <label for="star3" title="3 stars">★</label>
+              <input type="radio" id="star2" name="rating" value="2" />
+              <label for="star2" title="2 stars">★</label>
+              <input type="radio" id="star1" name="rating" value="1" />
+              <label for="star1" title="1 star">★</label>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="review-title">Review Title *</label>
+            <input type="text" id="review-title" placeholder="Sum up your experience" required />
+          </div>
+
+          <div class="form-group">
+            <label for="review-content">Your Review *</label>
+            <textarea id="review-content" rows="8" placeholder="Tell us about your experience with this recipe..." required></textarea>
+          </div>
+
+          <div class="form-row">
+            <div class="form-group">
+              <label for="review-difficulty">Difficulty Level</label>
+              <select id="review-difficulty">
+                <option value="">Select difficulty</option>
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="review-time">Time Spent</label>
+              <input type="text" id="review-time" placeholder="e.g., 45 minutes" />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="review-modifications">Modifications Made (Optional)</label>
+            <textarea id="review-modifications" rows="3" placeholder="Did you change anything? Share your tweaks..."></textarea>
+          </div>
+
+          <div class="form-group">
+            <label class="checkbox-label">
+              <input type="checkbox" id="review-again" />
+              <span>I would make this recipe again</span>
+            </label>
+          </div>
+
+          <div class="form-group">
+            <label for="review-photo">Upload Photo (Optional)</label>
+            <div class="custom-file-upload">
+              <input type="file" id="review-photo" accept="image/*" class="file-input" />
+              <label for="review-photo" class="file-label">
+                <span class="file-button">Choose File</span>
+                <span class="file-name" id="review-photo-name">No file selected</span>
+              </label>
+            </div>
+            <small>Share a photo of your creation!</small>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn-cancel" id="cancel-review">Cancel</button>
+            <button type="submit" class="btn-submit">Submit Review</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="js/blogs.js"></script>
+    <script src="js/ai-chatbot.js"></script>
+  </body>
+</html>
